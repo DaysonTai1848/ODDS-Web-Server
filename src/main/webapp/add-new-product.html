@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <script src="add-new-product.js"></script>
+  </head>
+  <body>
+    <div class="add-new-product-page">
+      <top-nav></top-nav>
+      <script src="components/top-nav.js"></script>
+
+      <div class="sidenav-content-container">
+        <side-nav></side-nav>
+        <script src="components/side-nav.js"></script>
+        <div class="add-new-product-content-container">
+          <div class="add-new-product-upper-section-container">
+            <div>
+              <p>Product > Add Products</p>
+              <h1>Add Products</h1>
+            </div>
+          </div>
+          <hr />
+          <div class="add-new-product-form-container">
+            <!-- <div class="add-product-property">
+              <div class="add-product-label">Product Status</div>
+              <div class="add-product-input">Active</div>
+            </div> -->
+            <!-- <div class="add-product-property">
+              <div class="add-product-label">Product Image</div>
+              <div class="add-product-input">
+                <input
+                  type="file"
+                  id="product-img"
+                  name="product-img"
+                  accept="image/*"
+                />
+              </div>
+            </div> -->
+            <div class="add-product-property">
+              <div class="add-product-label">Product Name</div>
+              <div class="add-product-input">
+                <input type="text" />
+              </div>
+            </div>
+            <div class="add-product-property">
+              <div class="add-product-label">Category</div>
+              <div class="add-product-input">
+                <select>
+                  <option value="0">Groceries</option>
+                  <option value="1">Cloth</option>
+                </select>
+              </div>
+            </div>
+            <div class="add-product-property">
+              <div class="add-product-label">Product Description</div>
+              <div class="add-product-input">
+                <div class="add-product-input">
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+            <div class="add-product-property">
+              <div class="add-product-label">Variation</div>
+              <div id="parent" class="add-product-input">
+                <table id="clone-variation">
+                  <tr>
+                    <th>Variation ID</th>
+                    <th>Image</th>
+                    <th>Variation Type</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td class="">001</td>
+                    <td>
+                      <div class="add-product-input-image-container">
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label class="add-product-input-image" for="actual-btn"
+                          >Upload Image</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <input type="text" placeholder="eg: colour, volume" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <!-- <select>
+                      <option value="0">Activate</option>
+                      <option value="1">Deactivated</option>
+                      <option value="2">Hide</option>
+                    </select> -->
+                  </tr>
+                </table>
+                <table id="clone-variation" class="child">
+                  <tr>
+                    <td class="">001</td>
+                    <td>
+                      <div class="add-product-input-image-container">
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label class="add-product-input-image" for="actual-btn"
+                          >Upload Image</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <input type="text" placeholder="eg: colour, volume" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <select>
+                        <option value="0">Activate</option>
+                        <option value="1">Deactivated</option>
+                        <option value="2">Hide</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+                <table id="clone-variation" class="child">
+                  <tr>
+                    <td class="">001</td>
+                    <td>
+                      <div class="add-product-input-image-container">
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label class="add-product-input-image" for="actual-btn"
+                          >Upload Image</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <input type="text" placeholder="eg: colour, volume" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                  </tr>
+                </table>
+                <table id="clone-variation" class="child">
+                  <tr>
+                    <td class="">001</td>
+                    <td>
+                      <div class="add-product-input-image-container">
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label class="add-product-input-image" for="actual-btn"
+                          >Upload Image</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <input type="text" placeholder="eg: colour, volume" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                  </tr>
+                </table>
+                <table id="clone-variation" class="child">
+                  <tr>
+                    <td class="">001</td>
+                    <td>
+                      <div class="add-product-input-image-container">
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label class="add-product-input-image" for="actual-btn"
+                          >Upload Image</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <input type="text" placeholder="eg: colour, volume" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                  </tr>
+                </table>
+                <table id="clone-variation" class="child">
+                  <tr>
+                    <td class="">001</td>
+                    <td>
+                      <div class="add-product-input-image-container">
+                        <!--default html file upload button-->
+                        <input type="file" id="actual-btn" hidden />
+                        <!--our custom file upload button-->
+                        <label class="add-product-input-image" for="actual-btn"
+                          >Upload Image</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <input type="text" placeholder="eg: colour, volume" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <select>
+                        <option value="0">Activate</option>
+                        <option value="1">Deactivated</option>
+                        <option value="2">Hide</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- <script>
+                  const addVariationButton = document.getElementById(
+                    "add-variation-button"
+                  );
+
+                  let count = 2;
+
+                  addVariationButton.addEventListener("click", function () {
+                    document
+                      .querySelector("#parent :nth-child(3)")
+                      .classList.remove("hidden");
+                    //   document.querySelector("#parent :nth-child(3)").classList.remove("hidden");
+                    count++;
+                  });
+                </script> -->
+                <button id="add-variation-button">+ Add Variation</button>
+              </div>
+            </div>
+
+            <div class="add-product-buttons">
+              <button>Cancel</button>
+              <button>Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

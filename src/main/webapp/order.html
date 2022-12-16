@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="order-page">
+      <top-nav></top-nav>
+      <script src="components/top-nav.js"></script>
+
+      <div class="sidenav-content-container">
+        <side-nav></side-nav>
+        <script src="components/side-nav.js"></script>
+        <div class="order-content-container">
+          <div class="order-upper-section-container">
+            <div>
+              <p>Order > My Orders</p>
+              <h1>My Orders</h1>
+            </div>
+          </div>
+          <hr />
+          <div class="order-filter-container">
+            <div class="order-date-filter-export-container">
+              <span>Order Date:</span>
+              <input type="date" id="order-date" name="order-date" />
+              <button>Export</button>
+            </div>
+            <div class="order-filter-input-container">
+              <div class="search-bar-select-box">
+                <select>
+                  <option value="0">Order ID</option>
+                  <option value="1">Order Status</option>
+                </select>
+              </div>
+              <div class="search-bar-input">
+                <input type="text" name="product-search-input" />
+              </div>
+            </div>
+            <div class="order-status-filter-container"></div>
+            <div class="order-table-container">
+              <table>
+                <tr>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th>Order ID</th>
+                  <th>Products</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Order Status</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td><a href="./order-detail.html">8415815</a></td>
+                  <td>Blue Jeans<br />Milk</td>
+                  <td>7 MAY 2021 17:02</td>
+                  <td>RM 35.50</td>
+                  <td>Unpaid</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td><a href="./order-detail.html">8416261</a></td>
+                  <td>
+                    White T-shirt<br />
+                    Camera
+                  </td>
+                  <td>7 MAY 2021 17:02</td>
+                  <td>RM 19.90</td>
+                  <td>Completed</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

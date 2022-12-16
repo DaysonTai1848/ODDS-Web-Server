@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-page">
+      <top-nav></top-nav>
+      <script src="components/top-nav.js"></script>
+
+      <div class="sidenav-content-container">
+        <side-nav></side-nav>
+        <script src="components/side-nav.js"></script>
+        <div class="dashboard-content-container">
+          <p>Dashboard</p>
+          <h1>Shop Name</h1>
+          <hr />
+          <div class="five-metrics-container">
+            <div>
+              <h3>10</h3>
+              <p>Unpaid</p>
+            </div>
+            <div>
+              <h3>21</h3>
+              <p>To-Pack</p>
+            </div>
+            <div>
+              <h3>10</h3>
+              <p>To-Deliver</p>
+            </div>
+            <div>
+              <h3>10</h3>
+              <p>Completed</p>
+            </div>
+            <div>
+              <h3>10</h3>
+              <p>Cancelled</p>
+            </div>
+          </div>
+          <div class="business-insight-container">
+            <div class="business-insight-header">
+              <h2>Business Insight</h2>
+            </div>
+            <div class="business-insight-content">
+              <p>Insert Sales Chart Here</p>
+            </div>
+          </div>
+          <div class="shop-penalty-container">
+            <div class="shop-penalty-header">
+              <h2>Shop Penalty</h2>
+            </div>
+            <div class="shop-penalty-content"></div>
+          </div>
+          <form action="postProduct" method="POST">
+		    <label for="product-name">Product name:</label>
+		    <input type="text" id="product-name" name="product-name"><br><br>
+		    <input type="submit" value="Submit">
+		  </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="product-page">
+      <top-nav></top-nav>
+      <script src="components/top-nav.js"></script>
+
+      <div class="sidenav-content-container">
+        <side-nav></side-nav>
+        <script src="components/side-nav.js"></script>
+        <div class="product-content-container">
+          <div class="product-upper-section-container">
+            <div class="breadcrumb-title-container">
+              <p>Product > My Products</p>
+              <h1>My Products</h1>
+            </div>
+            <div class="my-product-buttons">
+              <button>Add Stock</button>
+              <button>Add Product</button>
+            </div>
+          </div>
+          <hr />
+          <div class="search-bar-and-button-container">
+            <div class="search-bar-container">
+              <div class="search-bar-select-box">
+                <select>
+                  <option value="0">SKU</option>
+                  <option value="1">Category</option>
+                  <option value="2">Stock Status</option>
+                </select>
+              </div>
+              <div class="search-bar-input">
+                <input type="text" name="product-search-input" />
+              </div>
+            </div>
+            <div class="search-button-container">
+              <button>Search</button>
+            </div>
+          </div>
+          <div class="product-table-container">
+            <table>
+              <tr>
+                <th>
+                  <input type="checkbox" />
+                </th>
+                <th>SKU</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Stock Status</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td><a href="./product-detail.html">JEAN001A</a></td>
+                <td>Cloth</td>
+                <td><a href="./product-detail.html">Blue Jeans</a></td>
+                <td>RM 35.50</td>
+                <td>1</td>
+                <td>Low</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td><a href="./product-detail.html">TSH001A</a></td>
+                <td>Cloth</td>
+                <td><a href="./product-detail.html">White T-shirt</a></td>
+                <td>RM 19.90</td>
+                <td>415</td>
+                <td>Sufficient</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
