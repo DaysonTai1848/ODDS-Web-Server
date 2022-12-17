@@ -25,47 +25,46 @@
           </div>
           <hr />
           <div class="add-new-product-form-container">
-            <!-- <div class="add-product-property">
-              <div class="add-product-label">Product Status</div>
-              <div class="add-product-input">Active</div>
-            </div> -->
-            <!-- <div class="add-product-property">
-              <div class="add-product-label">Product Image</div>
-              <div class="add-product-input">
-                <input
-                  type="file"
-                  id="product-img"
-                  name="product-img"
-                  accept="image/*"
-                />
-              </div>
-            </div> -->
+			
+		  <form action="postProduct" method="POST">
             <div class="add-product-property">
               <div class="add-product-label">Product Name</div>
               <div class="add-product-input">
-                <input type="text" />
+                <input type="text" name="product_name"/>
               </div>
             </div>
             <div class="add-product-property">
               <div class="add-product-label">Category</div>
               <div class="add-product-input">
-                <select>
-                  <option value="0">Groceries</option>
-                  <option value="1">Cloth</option>
+                <select name="product_category">
+                  <option value="BAC">Baby Care</option>
+                  <option value="BAK">Bakery</option>
+                  <option value="BEP">Beauty & Personal Care</option>
+                  <option value="DAP">Dairy Products</option>
+                  <option value="DRB">Drinks & Beverages</option>
+                  <option value="FOE">Food Essentials</option>
+                  <option value="FRF">Frozen Foods</option>
+                  <option value="FRP">Fresh Produce</option>
+                  <option value="HEC">Health Care</option>
+                  <option value="HOG">Home & Gardening</option>
+                  <option value="HOU">Household</option>
+                  <option value="MEP">Meat & Poultry</option>
+                  <option value="SNC">Snack & Confectionery</option>
                 </select>
               </div>
             </div>
             <div class="add-product-property">
               <div class="add-product-label">Product Description</div>
               <div class="add-product-input">
-                <div class="add-product-input">
-                  <input type="text" />
-                </div>
+                  <textarea name="product_description" class="add-product-textarea"></textarea>
               </div>
             </div>
+            
             <div class="add-product-property">
               <div class="add-product-label">Variation</div>
               <div id="parent" class="add-product-input">
+              
+              
                 <table id="clone-variation">
                   <tr>
                     <th>Variation ID</th>
@@ -77,10 +76,11 @@
                   </tr>
                   <tr>
                     <td class="">001</td>
+                    <input type="number" name="variation_id" value="001" hidden/>
                     <td>
                       <div class="add-product-input-image-container">
                         <!--default html file upload button-->
-                        <input type="file" id="actual-btn" hidden />
+                        <input type="file" id="actual-btn" hidden name="product_image" />
                         <!--our custom file upload button-->
                         <label class="add-product-input-image" for="actual-btn"
                           >Upload Image</label
@@ -88,155 +88,28 @@
                       </div>
                     </td>
                     <td>
-                      <input type="text" placeholder="eg: colour, volume" />
+                      <input type="text" placeholder="eg: colour, volume" name="variation_type"/>
                     </td>
                     <td>
-                      <input type="text" />
+                      <input type="number" name="variation_price"/>
                     </td>
                     <td>
-                      <input type="text" />
+                      <input type="number" name="variation_stock"/>
                     </td>
-                    <!-- <select>
-                      <option value="0">Activate</option>
-                      <option value="1">Deactivated</option>
-                      <option value="2">Hide</option>
-                    </select> -->
+					<td>
+                      <select name="variation_status">
+	                      <option value="0">Activate</option>
+	                      <option value="1">Deactivated</option>
+	                      <option value="2">Hide</option>
+	                    </select>
+                    </td>
+                
+         
                   </tr>
                 </table>
-                <table id="clone-variation" class="child">
-                  <tr>
-                    <td class="">001</td>
-                    <td>
-                      <div class="add-product-input-image-container">
-                        <!--default html file upload button-->
-                        <input type="file" id="actual-btn" hidden />
-                        <!--our custom file upload button-->
-                        <label class="add-product-input-image" for="actual-btn"
-                          >Upload Image</label
-                        >
-                      </div>
-                    </td>
-                    <td>
-                      <input type="text" placeholder="eg: colour, volume" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td>
-                      <select>
-                        <option value="0">Activate</option>
-                        <option value="1">Deactivated</option>
-                        <option value="2">Hide</option>
-                      </select>
-                    </td>
-                  </tr>
-                </table>
-                <table id="clone-variation" class="child">
-                  <tr>
-                    <td class="">001</td>
-                    <td>
-                      <div class="add-product-input-image-container">
-                        <!--default html file upload button-->
-                        <input type="file" id="actual-btn" hidden />
-                        <!--our custom file upload button-->
-                        <label class="add-product-input-image" for="actual-btn"
-                          >Upload Image</label
-                        >
-                      </div>
-                    </td>
-                    <td>
-                      <input type="text" placeholder="eg: colour, volume" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                  </tr>
-                </table>
-                <table id="clone-variation" class="child">
-                  <tr>
-                    <td class="">001</td>
-                    <td>
-                      <div class="add-product-input-image-container">
-                        <!--default html file upload button-->
-                        <input type="file" id="actual-btn" hidden />
-                        <!--our custom file upload button-->
-                        <label class="add-product-input-image" for="actual-btn"
-                          >Upload Image</label
-                        >
-                      </div>
-                    </td>
-                    <td>
-                      <input type="text" placeholder="eg: colour, volume" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                  </tr>
-                </table>
-                <table id="clone-variation" class="child">
-                  <tr>
-                    <td class="">001</td>
-                    <td>
-                      <div class="add-product-input-image-container">
-                        <!--default html file upload button-->
-                        <input type="file" id="actual-btn" hidden />
-                        <!--our custom file upload button-->
-                        <label class="add-product-input-image" for="actual-btn"
-                          >Upload Image</label
-                        >
-                      </div>
-                    </td>
-                    <td>
-                      <input type="text" placeholder="eg: colour, volume" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                  </tr>
-                </table>
-                <table id="clone-variation" class="child">
-                  <tr>
-                    <td class="">001</td>
-                    <td>
-                      <div class="add-product-input-image-container">
-                        <!--default html file upload button-->
-                        <input type="file" id="actual-btn" hidden />
-                        <!--our custom file upload button-->
-                        <label class="add-product-input-image" for="actual-btn"
-                          >Upload Image</label
-                        >
-                      </div>
-                    </td>
-                    <td>
-                      <input type="text" placeholder="eg: colour, volume" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td>
-                      <select>
-                        <option value="0">Activate</option>
-                        <option value="1">Deactivated</option>
-                        <option value="2">Hide</option>
-                      </select>
-                    </td>
-                  </tr>
-                </table>
+                
+                
+       
 
                 <!-- <script>
                   const addVariationButton = document.getElementById(
@@ -253,14 +126,16 @@
                     count++;
                   });
                 </script> -->
-                <button id="add-variation-button">+ Add Variation</button>
+                <!--  <button id="add-variation-button hidden">+ Add Variation</button>--> 
               </div>
             </div>
+          
 
             <div class="add-product-buttons">
               <button>Cancel</button>
-              <button>Save</button>
+              <input type="submit" value="Save">
             </div>
+            </form>
           </div>
         </div>
       </div>
